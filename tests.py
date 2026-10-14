@@ -97,7 +97,7 @@ def check_menuItem_cpp():
     checks = [
         
     (r"void\s+MenuItem\s*::\s*operator\s*-\s*\(\s*double\s*", "void MenuItem::operator-(double)"),
-    (r"MenuItem\s+MenuItem\s*::\s*operator\s*\+\s*\(\s*(?:const\s+)?MenuItem\s*&\s*", "MenuItem MenuItem::operator+(const MenuItem&)"),
+    (r"MenuItem\s+MenuItem\s*::\s*operator\s*\+\s*\(\s*const\s+MenuItem\s*&\s*", "MenuItem MenuItem::operator+(const MenuItem&)"),
     (r"ostream\s*&\s*operator\s*<<", "ostream& operator<<(ostream&, const MenuItem&)")
     ]
     for regex, label in checks:
@@ -127,8 +127,8 @@ def check_restaurant_header():
 
     checks = [
     
-    (r"void\s+operator\s*\+\s*\(\s*(?:const\s+)?MenuItem\s*&\s*\)", "void operator+(const MenuItem&)"),
-    (r"friend\s+ostream\s*&\s*operator\s*<<\s*\(\s*ostream\s*&\s*,\s*(?:const\s+)?Restaurant\s*&\s*\)", "friend ostream& operator<<(ostream&, const Restaurant&)")
+    (r"void\s+operator\s*\+\s*\(\s*const\s+MenuItem\s*&\s*\)", "void operator+(const MenuItem&)"),
+    (r"friend\s+ostream\s*&\s*operator\s*<<\s*\(\s*ostream\s*&\s*,\s*const\s*Restaurant\s*&\s*\)", "friend ostream& operator<<(ostream&, const Restaurant&)")
     ]
 
     checks2 = [
@@ -163,7 +163,7 @@ def check_restaurant_cpp():
  
     checks = [
         
-    (r"void\s+Restaurant\s*::\s*operator\s*\+\s*\(\s*(?:const\s+)?MenuItem\s*&\s*", "void Restaurant::operator+(const MenuItem&)"),
+    (r"void\s+Restaurant\s*::\s*operator\s*\+\s*\(\s*const\s+MenuItem\s*&\s*", "void Restaurant::operator+(const MenuItem&)"),
     (r"ostream\s*&\s*operator\s*<<", "ostream& operator<<(ostream&, const Restaurant&)")
     ]
     for regex, label in checks:
