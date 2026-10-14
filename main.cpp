@@ -48,7 +48,7 @@ int main(){
     MenuItem combo = burger + softDrink;
 
     // Set the combo item's name to "Combo (Burger & Drinks)".
-    combo.setName("Burger & Drinks");
+    combo.setName("Combo (Burger & Drinks)");
 
     // Add combo to the restaurant using the overloaded + operator of the Restaurant class.
     restaurant + combo;

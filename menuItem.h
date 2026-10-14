@@ -17,8 +17,6 @@ class MenuItem{
 
         string getName();
         double getPrice();
-
-        void displayMenuItemData();
        
         void operator-(double);
         MenuItem operator+(const MenuItem&);

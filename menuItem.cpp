@@ -27,10 +27,6 @@ double MenuItem::getPrice(){
     return price;
 }
 
-void MenuItem::displayMenuItemData(){
-    cout  << name << ": " << price << endl;
-}
-
 void MenuItem::operator-(double d)
 {
     price -= d;

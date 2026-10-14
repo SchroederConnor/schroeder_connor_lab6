@@ -57,7 +57,7 @@ ostream& operator<<(ostream& os, const Restaurant& rh)
 
     for(int i=0;i<rh.numItem;i++){
         MenuItem m = rh.items[i];
-        m.displayMenuItemData();
+        cout << m;
     }
     return os;
 }
