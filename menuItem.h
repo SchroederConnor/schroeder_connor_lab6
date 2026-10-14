@@ -20,7 +20,9 @@ class MenuItem{
 
         void displayMenuItemData();
        
-
+        void operator-(double);
+        MenuItem operator+(const MenuItem&);
+        friend ostream& operator<<(ostream&, const MenuItem&);
 };
 
 #endif

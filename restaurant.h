@@ -21,10 +21,8 @@ class Restaurant{
         void setName(string);
         void addItem(MenuItem);
 
-        void displayRestaurantData();
-       
-
-
+        void operator+(const MenuItem&);
+        friend ostream& operator<<(ostream&, const Restaurant&);
 };
 
 #endif

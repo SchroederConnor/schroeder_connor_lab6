@@ -29,6 +29,22 @@ double MenuItem::getPrice(){
 
 void MenuItem::displayMenuItemData(){
     cout  << name << ": " << price << endl;
-    
 }
 
+void MenuItem::operator-(double d)
+{
+    price -= d;
+    if(price < 0) {price = 0;}
+}
+MenuItem MenuItem::operator+(const MenuItem& rh)
+{
+    double sum = price + rh.price;
+    MenuItem m("N/A", sum);
+    return m;
+}
+
+ostream& operator<<(ostream& os, const MenuItem& rh)
+{
+    cout << rh.name << ": $" << rh.price << endl;
+    return os;
+}
