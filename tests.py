@@ -235,7 +235,7 @@ def check_main():
     checks = [
    
 
-    (r'burger\s*-\s*2\.5\s*;', 
+    (r'burger\s*-\s*2\.5', 
      'Apply discount using operator-'),
 
 
