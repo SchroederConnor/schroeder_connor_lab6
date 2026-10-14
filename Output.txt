@@ -1,0 +1,9 @@
+Welcome to Hello World
+===================
+Menu
+Burger: $6
+Pizza: $18.55
+Sandwich: $10.5
+Soft Drink: $2.5
+Combo (Burger & Drinks): $8.5
+Can not add new menu item. Limit exceeded!
